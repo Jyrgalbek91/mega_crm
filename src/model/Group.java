@@ -3,9 +3,9 @@ package model;
 import java.time.LocalTime;
 
 public class Group extends BaseEntity{
-    private String name;
-    private String room;
-    private LocalTime startTime;
+    protected String name;
+    protected String room;
+    protected LocalTime startTime;
 
     public String getName() {
         return name;
@@ -29,5 +29,16 @@ public class Group extends BaseEntity{
 
     public void setStartTime(LocalTime startTime) {
         this.startTime = startTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Group{" +
+                "name='" + name + '\'' +
+                ", room='" + room + '\'' +
+                ", startTime=" + startTime +
+                ", id=" + id +
+                ", dateCreated=" + dateCreated +
+                '}';
     }
 }

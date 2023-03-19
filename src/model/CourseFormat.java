@@ -1,26 +1,20 @@
 package model;
 
-public class CourseFormat extends  BaseEntity{
-    private String format;
-    private int durationInWeek;
-    private boolean isOnline;
-    private int lessonDuration;
-    private int lessonCountPerWeek;
+import enums.Format;
 
-    public String getFormat() {
+public class CourseFormat extends  BaseEntity{
+    protected Format format;
+    protected boolean isOnline;
+    protected int durationInWeek;
+    protected int lessonDuration;
+    protected int lessonCountPerWeek;
+
+    public Format getFormat() {
         return format;
     }
 
-    public void setFormat(String format) {
+    public void setFormat(Format format) {
         this.format = format;
-    }
-
-    public int getDurationInWeek() {
-        return durationInWeek;
-    }
-
-    public void setDurationInWeek(int durationInWeek) {
-        this.durationInWeek = durationInWeek;
     }
 
     public boolean isOnline() {
@@ -29,6 +23,14 @@ public class CourseFormat extends  BaseEntity{
 
     public void setOnline(boolean online) {
         isOnline = online;
+    }
+
+    public int getDurationInWeek() {
+        return durationInWeek;
+    }
+
+    public void setDurationInWeek(int durationInWeek) {
+        this.durationInWeek = durationInWeek;
     }
 
     public int getLessonDuration() {
@@ -51,10 +53,12 @@ public class CourseFormat extends  BaseEntity{
     public String toString() {
         return "CourseFormat{" +
                 "format='" + format + '\'' +
-                ", durationInWeek=" + durationInWeek +
                 ", isOnline=" + isOnline +
+                ", durationInWeek=" + durationInWeek +
                 ", lessonDuration=" + lessonDuration +
                 ", lessonCountPerWeek=" + lessonCountPerWeek +
+                ", id=" + id +
+                ", dateCreated=" + dateCreated +
                 '}';
     }
 }

@@ -1,8 +1,8 @@
 package model;
 
-public class Mentor extends User{
-    private double experience;
-    private double salaryForLesson;
+public class Mentor extends User {
+    protected double experience;
+    protected double salaryForLesson;
 
     public double getExperience() {
         return experience;
@@ -18,5 +18,20 @@ public class Mentor extends User{
 
     public void setSalaryForLesson(double salaryForLesson) {
         this.salaryForLesson = salaryForLesson;
+    }
+
+    @Override
+    public String
+    toString() {
+        return "Mentor{" +
+                "experience=" + experience +
+                ", salaryForLesson=" + salaryForLesson +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", id=" + id +
+                ", dateCreated=" + dateCreated +
+                '}';
     }
 }
